@@ -1,6 +1,6 @@
 import './App.css';
 import SignIn from "./sign-in/SignIn";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./sign-up/SignUp";
 import MarketingPage from './marketing-page/MarketingPage';
 import Dashboard from './dashboard/Dashboard';
@@ -13,7 +13,7 @@ function App() {
     <AuthProvider>
       <NameProvider>
         <EmailProvider>
-          <BrowserRouter basename="/Real-Estate">
+          <HashRouter>
             <Routes>
               <Route path='/marketing' element={
                 <ProtectedRoute isLoggedIn={true}>
@@ -31,7 +31,7 @@ function App() {
               <Route path='/SignUp' element={<SignUp />}></Route>
               <Route path='*' element={<NotFound></NotFound>}></Route>
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </EmailProvider>
       </NameProvider>
     </AuthProvider>

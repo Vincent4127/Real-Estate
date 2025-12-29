@@ -70,7 +70,7 @@ export default function OptionsMenu() {
         <Typography sx={{ textAlign: 'left' }}>
           <Button fullWidth onClick={signOut}>
             <Link
-              href="/SignIn"
+              href="#/SignIn"
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >

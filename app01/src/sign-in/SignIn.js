@@ -579,7 +579,7 @@ export default function SignIn(props) {
             <Typography sx={{ textAlign: 'center' }}>
               Don&apos;t have an account?{' '}
               <Link
-                href="/SignUp"
+                href="#/SignUp"
                 variant="body2"
                 sx={{ alignSelf: 'center' }}
               >
