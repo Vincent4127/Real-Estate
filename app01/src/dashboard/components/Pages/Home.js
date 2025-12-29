@@ -6,7 +6,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Grid from "@mui/material/Grid";
 import PropertyCard from '../pagesComponents/propertiesCard.js';
 
-let API = 'http://localhost:5000/api/states';
+let API = 'https://real-estate-27ed.onrender.com/api/states';
 
 export default function Home() {
   const [allStates, setAllStates] = useState([]);
@@ -22,26 +22,23 @@ export default function Home() {
       })
       .then((data) => {
         setAllStates(data);
-        setShownStates(data); // ✅ default show all
+        setShownStates(data); 
       })
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
-  // ✅ run search when SelectGovernorate triggers the event
   useEffect(() => {
     const runSearch = () => {
       const gov = localStorage.getItem("gov") || "";
       const district = localStorage.getItem("district") || "";
       const city = localStorage.getItem("city") || "";
 
-      // ✅ if nothing selected -> show all
       if (!gov && !district && !city) {
         setShownStates(allStates);
         return;
       }
 
-      // ✅ filter locally
       const g = gov.trim().toLowerCase();
       const d = district.trim().toLowerCase();
       const c = city.trim().toLowerCase();

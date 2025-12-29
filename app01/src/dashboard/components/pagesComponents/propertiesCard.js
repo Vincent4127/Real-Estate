@@ -16,7 +16,7 @@ import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://real-estate-27ed.onrender.com";
 
 function toImgUrl(src) {
     if (!src) return "";

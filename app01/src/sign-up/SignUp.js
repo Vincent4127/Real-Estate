@@ -388,7 +388,7 @@ export default function SignUp(props) {
   // ✅ ADDED: loading state
   const [loading, setLoading] = React.useState(false);
 
-  const API = "http://localhost:5000/api/users";
+  const API = "https://real-estate-27ed.onrender.com/api/users";
 
   let data = [];
 
@@ -435,7 +435,6 @@ export default function SignUp(props) {
   const validateInputs = async (e) => {
     e.preventDefault();
 
-    // ✅ ADDED: show spinner + blur during async signup flow
     setLoading(true);
     try {
       const email = document.getElementById('email');
@@ -528,7 +527,6 @@ export default function SignUp(props) {
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
 
-      {/* ✅ ADDED: blur background + spinner overlay */}
       <Backdrop
         open={loading}
         sx={{

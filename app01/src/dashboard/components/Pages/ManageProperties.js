@@ -22,7 +22,7 @@ import {
 } from "@mui/material";
 import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://real-estate-27ed.onrender.com";
 
 // ---------------- Helpers ----------------
 function parseImages(imagesField) {

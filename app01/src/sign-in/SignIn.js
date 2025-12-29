@@ -311,7 +311,7 @@ import { useAuth, useName, useEmail } from '../authentication';
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 
-const API = "http://localhost:5000/api/users";
+const API = "https://real-estate-27ed.onrender.com/api/users";
 
 let users = [];
 
