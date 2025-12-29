@@ -13,7 +13,7 @@ function App() {
     <AuthProvider>
       <NameProvider>
         <EmailProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="/Real-Estate">
             <Routes>
               <Route path='/marketing' element={
                 <ProtectedRoute isLoggedIn={true}>
