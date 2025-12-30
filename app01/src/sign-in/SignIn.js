@@ -293,6 +293,7 @@ import Divider from '@mui/material/Divider';
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
 import Link from '@mui/material/Link';
+import { Link as RouterLink } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
@@ -461,7 +462,6 @@ export default function SignIn(props) {
   const confirm = async (e) => {
     e.preventDefault();
 
-    // ✅ ADDED: show spinner + blur during async login flow
     setLoading(true);
     try {
       let ok = await validateInputs();
@@ -579,7 +579,8 @@ export default function SignIn(props) {
             <Typography sx={{ textAlign: 'center' }}>
               Don&apos;t have an account?{' '}
               <Link
-                href="#/SignUp"
+              component={RouterLink}
+                to="/SignUp"
                 variant="body2"
                 sx={{ alignSelf: 'center' }}
               >

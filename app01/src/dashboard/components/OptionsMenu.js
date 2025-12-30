@@ -11,6 +11,7 @@ import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import MoreVertRoundedIcon from '@mui/icons-material/MoreVertRounded';
 import MenuButton from './MenuButton';
 import Link from '@mui/material/Link';
+import { Link as RouterLink } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
@@ -70,7 +71,8 @@ export default function OptionsMenu() {
         <Typography sx={{ textAlign: 'left' }}>
           <Button fullWidth onClick={signOut}>
             <Link
-              href="#/SignIn"
+              component={RouterLink}
+              to="/SignIn"
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >

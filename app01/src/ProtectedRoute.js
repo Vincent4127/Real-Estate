@@ -3,6 +3,6 @@ import { useAuth } from "./authentication";
 
 export default function ProtectedRoute({children}) {
     const { isSignedIn } = useAuth();
-    if(!isSignedIn) return <Navigate to="/SignIn" replace />;
+    if(!isSignedIn) return <Navigate to="#/SignIn" replace />;
     return children;
 }
